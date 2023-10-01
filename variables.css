@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "Inter";
+  src: url(./assets/fonts/Inter-font/static/Inter-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(./assets/fonts/Inter-font/static/Inter-Medium.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(./assets/fonts/Inter-font/static/Inter-SemiBold.ttf);
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF-Mono";
+  src: url(./assets/fonts/SF-Mono/SFMono-Regular.otf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF-Pro-Text";
+  src: url(./assets/fonts/SF-Pro-Text/SFProText-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF-Pro-Text";
+  src: url(./assets/fonts/SF-Pro-Text/SFProText-Medium.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF-Pro-Text";
+  src: url(./assets/fonts/SF-Pro-Text/SFProText-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --Dark: #0d0d12;
+  --Dark-80: rgba(17, 17, 17, 0.80);
+  --Dark-40: rgba(17, 17, 17, 0.40);
+  --General: #41a4df;
+  --Blue-12: rgba(41, 126, 226, 0.12);
+  --Deep-blue: #297ee2;
+  --White: #fff;
+  --White-60: rgba(255, 255, 255, 0.60);
+  --Dark-blue: #232328;
+  --BG-pink: linear-gradient(340deg, #faaca8 8.42%, #ddd6f3 91.45%);
+  --BG-yellow: linear-gradient(207deg, #FCB69F 6.91%, #FFECD2 92.45%);
+  --BG-blue: linear-gradient(0deg, #C2E9FB -16.6%, #A1C4FD 106.15%);
+  --BG-dark: #18181D;
+  --Gradient-blue: linear-gradient(233deg, #9FCCFA -20.48%, #0974F1 97.38%);
+}
+

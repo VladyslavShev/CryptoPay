@@ -1,0 +1,134 @@
+/* Fonts Import */
+
+@font-face {
+  font-family: "Inter";
+  src: url(./assets/fonts/Inter-font/static/Inter-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(./assets/fonts/Inter-font/static/Inter-Medium.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(./assets/fonts/Inter-font/static/Inter-SemiBold.ttf);
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF-Mono";
+  src: url(./assets/fonts/SF-Mono/SFMono-Regular.otf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF-Pro-Text";
+  src: url(./assets/fonts/SF-Pro-Text/SFProText-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF-Pro-Text";
+  src: url(./assets/fonts/SF-Pro-Text/SFProText-Medium.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF-Pro-Text";
+  src: url(./assets/fonts/SF-Pro-Text/SFProText-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Colors */
+
+:root {
+  --Dark: #0d0d12;
+  --Dark-80: rgba(17, 17, 17, 0.8);
+  --Dark-40: rgba(17, 17, 17, 0.4);
+  --General: #41a4df;
+  --Blue-12: rgba(41, 126, 226, 0.12);
+  --Deep-blue: #297ee2;
+  --White: #fff;
+  --White-60: rgba(255, 255, 255, 0.6);
+  --Dark-blue: #232328;
+  --BG-pink: linear-gradient(340deg, #faaca8 8.42%, #ddd6f3 91.45%);
+  --BG-yellow: linear-gradient(207deg, #fcb69f 6.91%, #ffecd2 92.45%);
+  --BG-blue: linear-gradient(0deg, #c2e9fb -16.6%, #a1c4fd 106.15%);
+  --BG-dark: #18181d;
+  --Gradient-blue: linear-gradient(233deg, #9fccfa -20.48%, #0974f1 97.38%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+li {
+    list-style-type: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Container Styles */
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Content Styles */
+
+.content {
+    width: 1200px;
+  font-family: "Inter", sans-serif;
+}
+
+/* Font Styles */
+
+.text-s {
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+
+.text-m {
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.text-l {
+    font-family: Inter;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 629;
+    line-height: 110%; 
+    letter-spacing: -1.26px;
+}
+
+.text-xl {
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 629;
+  line-height: 110%;
+  letter-spacing: -2.4px;
+}
+

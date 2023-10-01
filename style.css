@@ -50,3 +50,63 @@
   text-align: center;
   border: none;
 }
+
+.section__cover {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section__main {
+    margin-top: 20px;
+}
+
+
+.section__title {
+    width: 692px;
+    margin-top: 80px;
+}
+
+.text__blue {
+    color: var(--General);
+}
+
+.section__description {
+    margin-top: 32px;
+    width: 350px;
+}
+
+.section__button {
+    margin-top: 32px;
+    padding: 18px 42px;
+    width: 196px;
+    border: none;
+    background:  var(--General);
+    border-radius: 900px;
+    color: var(--White);
+}
+
+.popular__bots-icons {
+    margin-top: 56px;
+    display: flex;
+    align-items: center;
+}
+
+.bot__icon {
+    width: 96px; 
+    height: 96px; 
+    margin-left: -32px; 
+}
+
+.bot__icon:first-child {
+    margin-left: 0; 
+}
+
+.popular__bots-text {
+    margin-top: 16px;
+}
+
+.phone {
+    margin-top: -11px;
+    padding-bottom: 60px;
+}

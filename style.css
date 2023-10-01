@@ -1,6 +1,52 @@
+@import url(./variables.css);
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+.header {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  width: 64px;
+  height: 64px;
+}
+
+.header__main {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.header__list {
+  width: 700px;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.header__link {
+  cursor: pointer;
+}
+
+.mode__icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.header__button {
+  padding: 18px 42px;
+  border-radius: 900px;
+  background: var(--Blue-12);
+  color: var(--Deep-blue, #297ee2);
+  text-align: center;
+  border: none;
+}

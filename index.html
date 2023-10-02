@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <script defer src="./scripts/index.js"></script>
     <title>Crypto pay</title>
   </head>
   <body>
     <div class="container">
-      <div class="content">
-        <header class="header">
+
+        <header class="header content">
           <img
             class="header__logo"
             src="./assets/icons/logo.svg"
@@ -29,7 +30,7 @@
             <button class="header__button text-m">Get started</button>
           </div>
         </header>
-        <section class="section__cover">
+        <section class="section__cover content">
           <div class="section__main">
             <h1 class="section__title text-xl">
               Crypto payments for <span class="text__blue">telegram bots</span>
@@ -40,22 +41,92 @@
             </h2>
             <button class="section__button text-ml">Get Started</button>
             <div class="popular__bots-icons">
-              <img class="bot__icon" src="./assets/icons/popular-bot-icon-1.svg" alt="">
-              <img class="bot__icon" src="./assets/icons/popular-bot-icon-2.svg" alt="">
-              <img class="bot__icon" src="./assets/icons/popular-bot-icon-3.svg" alt="">
-              <img class="bot__icon" src="./assets/icons/popular-bot-icon-4.svg" alt="">
-              <img class="bot__icon" src="./assets/icons/popular-bot-icon-5.svg" alt="">
+              <img
+                class="bot__icon"
+                src="./assets/icons/popular-bot-icon-1.svg"
+                alt=""
+              />
+              <img
+                class="bot__icon"
+                src="./assets/icons/popular-bot-icon-2.svg"
+                alt=""
+              />
+              <img
+                class="bot__icon"
+                src="./assets/icons/popular-bot-icon-3.svg"
+                alt=""
+              />
+              <img
+                class="bot__icon"
+                src="./assets/icons/popular-bot-icon-4.svg"
+                alt=""
+              />
+              <img
+                class="bot__icon"
+                src="./assets/icons/popular-bot-icon-5.svg"
+                alt=""
+              />
             </div>
             <p class="popular__bots-text text-s">Popular bots use Crypto Pay</p>
           </div>
-          <img class="phone" src="./assets/icons/img_phone.svg" alt="">
+          <img class="phone" src="./assets/icons/img_phone.svg" alt="" />
         </section>
         <section class="section__slider-presentation"></section>
-        <section class="section__product-presentation"></section>
+        <section class="section__product-presentation content">
+          <div class="product__presentation-currencies">
+            <div class="product__presentation-texts">
+              <h2 class="text-l">Accept a wide range of cryptocurrencies</h2>
+              <p class="text__product text-s">
+                Bill any supported cryptocurrencies with
+                <span class="text-m">asset </span>parameter in
+                <span class="text__blue">GetInvoice</span> method
+              </p>
+            </div>
+            <div class="img__currency-container"></div>
+          </div>
+          <div class="section__block-wrapper">
+            <div class="commission__exchange-wrapper">
+              <div class="commission__block">
+                <div class="commission__animated">
+                  <button class="animated__button text-mx">
+                    <img src="./assets/icons/tree.svg" alt="tree icon" /> Create
+                    App
+                  </button>
+                  <img
+                    src="./assets/icons/arrow__blue.svg"
+                    alt="animated blue arrow"
+                    class="animated__arrow"
+                  />
+                </div>
+                <div class="commission__text">
+                  <p class="text-l">One click to start</p>
+                  <p class="text-s">
+                    Open <span class="text__blue">@CryptoBot</span>, go to
+                    <span class="text__blue">Crypto Pay</span> and tap Create
+                    App to get API Token
+                  </p>
+                </div>
+              </div>
+              <div class="exchange__block">
+                <div class="exchange__animated">
+                  <div class="exchange__coin-background"></div>
+                  <div class="exchange__coin-background"></div>
+                  <div class="exchange__coin-background"></div>
+                </div>
+                <div class="exchange__text">
+                  <p class="text-l">Real-time exchange rates</p>
+                  <p class="text-s">
+                    Request up to date currency rate with the
+                    <span class="text__blue">getExchangeRates</span>API method
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section class="section__start-steps"></section>
         <section class="section__dev-community"></section>
         <footer class="footer"></footer>
-      </div>
     </div>
   </body>
 </html>

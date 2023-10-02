@@ -60,11 +60,14 @@
   --Deep-blue: #297ee2;
   --White: #fff;
   --White-60: rgba(255, 255, 255, 0.6);
+  --White-80: rgba(255, 255, 255, 0.8);
   --Dark-blue: #232328;
   --BG-pink: linear-gradient(340deg, #faaca8 8.42%, #ddd6f3 91.45%);
   --BG-yellow: linear-gradient(207deg, #fcb69f 6.91%, #ffecd2 92.45%);
   --BG-blue: linear-gradient(0deg, #c2e9fb -16.6%, #a1c4fd 106.15%);
+  --BG-purple: linear-gradient(297deg, #8ec5fc 8.25%, #e0c3fc 91.76%);
   --BG-dark: #18181d;
+  --Bg-light: #f7f9fb;
   --Gradient-blue: linear-gradient(233deg, #9fccfa -20.48%, #0974f1 97.38%);
 }
 
@@ -98,6 +101,13 @@ button {
 
 /* Font Styles */
 
+.text-xs {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
 .text-s {
   font-size: 20px;
   font-style: normal;
@@ -121,8 +131,15 @@ button {
   line-height: 120%;
 }
 
+.text-mx {
+  text-align: center;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
 .text-l {
-  font-family: Inter;
   font-size: 42px;
   font-style: normal;
   font-weight: 629;

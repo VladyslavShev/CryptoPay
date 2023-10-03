@@ -102,6 +102,7 @@
 }
 
 .phone {
+  
   margin-top: -11px;
   padding-bottom: 60px;
 }
@@ -398,6 +399,8 @@
 .slider__bar-active{
   background-color: var(--General);
   transition: 1s;
+}
+
 .coin__logo {
   transition: 0.3s ease-in-out;
   opacity: 0;

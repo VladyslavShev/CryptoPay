@@ -211,4 +211,4 @@ const exchangeBlock = document.querySelector(".exchange__block");
 exchangeBlock.addEventListener("mouseenter", mooveExchange);
 
 
-// Stat animation
+// Stat animationn

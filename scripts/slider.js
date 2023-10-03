@@ -33,8 +33,16 @@ function changeContentUp(step) {
 }
 
 function backgroundChange(step) {
-  sliderBackground.classList.remove(sliderBackground.classList.item(0));
-  sliderBackground.classList.add(`slider__bakground${step}`);
+document.querySelectorAll(".slider_back").forEach((e, idx) => {
+  if (idx + 1 === step) {
+    e.classList.add("back_active")
+  } else {
+    setTimeout(() => {
+      
+      e.classList.remove("back_active")
+    }, 300);
+  }
+})
 }
 
 sliderSection.addEventListener("wheel", function (event) {

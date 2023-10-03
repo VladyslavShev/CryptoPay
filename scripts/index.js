@@ -211,4 +211,76 @@ const exchangeBlock = document.querySelector(".exchange__block");
 exchangeBlock.addEventListener("mouseenter", mooveExchange);
 
 
-// Stat animationn
+
+
+const dataAllTime = {
+    name: "all time",
+    data: ["all time", "$204,920", "16,256", "9,353", "5,606", "57%"]
+};
+
+const dataToday = {
+    name: "today",
+    data: ["today", "$6,530", "2,569", "1,253", "1,606", "48%"]
+};
+
+const dataYesterday = {
+    name: "yesterday",
+    data: ["yesterday", "$8,216", "4,980", "3,012", "3.606", "60%"]
+};
+
+const statBlock = document.querySelector(".block__stat");
+const statData = document.querySelectorAll(".stat__data");
+const dataContent = document.querySelector(".stat__content")
+const statButton = document.querySelectorAll(".stat__button")
+
+let animationInProgress = false; 
+function statAnimation() {
+    if (animationInProgress) {
+        return; 
+    }
+
+    animationInProgress = true; 
+
+    for (let dataIndex = 0; dataIndex < statData.length; dataIndex++) {
+        statData[dataIndex].classList.add("active");
+        dataContent.classList.add("active");
+        statButton[0].classList.remove("active")
+        setTimeout(() => {
+          statButton[1].classList.add("active")
+            statData[dataIndex].innerHTML = dataToday.data[dataIndex];
+            statData[dataIndex].classList.remove("active");
+            dataContent.classList.remove("active");
+        }, 200);
+        setTimeout(() => {
+          statData[dataIndex].classList.add("active");
+          dataContent.classList.add("active");
+          statButton[1].classList.remove("active")
+            setTimeout(() => {
+              statButton[2].classList.add("active")
+                statData[dataIndex].innerHTML = dataYesterday.data[dataIndex];
+                statData[dataIndex].classList.remove("active");
+                dataContent.classList.remove("active");
+            }, 200);
+        }, 1000);
+
+        setTimeout(() => {
+          statButton[2].classList.remove("active")
+          statButton[0].classList.add("active")
+            statData[dataIndex].classList.add("active");
+            dataContent.classList.add("active");
+            setTimeout(() => {
+                statData[dataIndex].innerHTML = dataAllTime.data[dataIndex];
+                statData[dataIndex].classList.remove("active");
+                dataContent.classList.remove("active");
+    
+                if (dataIndex === statData.length - 1) {
+                    animationInProgress = false; // 
+                }
+
+            }, 200);
+        }, 2000);
+    }
+}
+
+statBlock.addEventListener("mouseenter", statAnimation);
+

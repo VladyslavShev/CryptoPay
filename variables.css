@@ -71,6 +71,10 @@
   --Gradient-blue: linear-gradient(233deg, #9fccfa -20.48%, #0974f1 97.38%);
 }
 
+.text__white{
+  color:var(--White);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -153,4 +157,12 @@ button {
   font-weight: 629;
   line-height: 110%;
   letter-spacing: -2.4px;
+}
+
+.text-xm{
+font-size: 56px;
+font-style: normal;
+font-weight: 629;
+line-height: 110%; 
+letter-spacing: -1.68px;
 }

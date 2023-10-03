@@ -85,3 +85,5 @@ sliderSection.addEventListener("wheel", function (event) {
     }, 1000);
   }
 });
+
+// Some comments

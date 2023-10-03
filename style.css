@@ -314,7 +314,6 @@
 }
 
 .slider__text_container1{
-  /* margin-left: 122px; */
   margin-top: 61px;
   transition: 1s;
   position: absolute;
@@ -322,7 +321,6 @@
   opacity: 1;
 }
 .slider__text_container2{
-  /* margin-left: 122px; */
   margin-top: 61px;
   transition: 1s;
   position: absolute;
@@ -330,7 +328,6 @@
   opacity: 0;
 }
 .slider__text_container3{
-  /* margin-left: 122px; */
   margin-top: 61px;
   transition: 1s;
   position: absolute;

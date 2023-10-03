@@ -43,37 +43,61 @@ for (let index = 0; index < currencyImages.length; index++) {
   imgContainer.append(currencyWrapper);
 }
 
+
+// ZOOM IMAGES
 function zoomImages() {
-  const imgCurrencyElements = document.querySelectorAll(".currency__img");
-  const imgCurrencyText = document.querySelectorAll(".img__currency-text");
-  let currentIndex = 0;
+    if (isAnimatingZoom) {
+      return;
+    }
+  
+    const imgCurrencyElements = document.querySelectorAll(".currency__img");
+    const imgCurrencyText = document.querySelectorAll(".img__currency-text");
+    let currentIndex = 0;
+    const zoomInterval = setInterval(() => {
+  
+      imgCurrencyElements[currentIndex].classList.add("zoomed");
+      imgCurrencyText[currentIndex].classList.add("zoomed");
+  
+      setTimeout(() => {
+        imgCurrencyElements[currentIndex].classList.remove("zoomed");
+        imgCurrencyText[currentIndex].classList.remove("zoomed");
+        currentIndex++;
+  
+        if (currentIndex === currencyImages.length) {
+          clearInterval(zoomInterval);
+          isAnimatingZoom = false;
+        }
+      }, 300);
+    }, 600);
+  
+    isAnimatingZoom = true;
+  }
+  
+  const productPresentation = document.querySelector(
+    ".product__presentation-currencies"
+  );
+  
+  let isAnimatingZoom = false;
+  
+  productPresentation.addEventListener("mouseenter", zoomImages);
+  
 
-  const zoomInterval = setInterval(() => {
-    imgCurrencyElements[currentIndex].classList.add("zoomed");
-    imgCurrencyText[currentIndex].classList.add("zoomed");
-
-    setTimeout(() => {
-      imgCurrencyElements[currentIndex].classList.remove("zoomed");
-      imgCurrencyText[currentIndex].classList.remove("zoomed");
-      currentIndex++;
-
-      if (currentIndex === currencyImages.length) {
-        clearInterval(zoomInterval);
-      }
-    }, 300);
-  }, 600);
-}
-
-const productPresentation = document.querySelector(
-  ".product__presentation-currencies"
-);
-productPresentation.addEventListener("mouseenter", zoomImages);
 
 
-const animatedButton = document.querySelector(".animated__button")
+
+// MOOVE ARROW
+
+const animatedButton = document.querySelector(".animated__button");
+const arrow = document.querySelector(".animated__arrow");
+let isAnimatingArrow = false; 
 
 function moveArrow() {
-  const arrow = document.querySelector(".animated__arrow");
+  if (isAnimatingArrow) {
+    return; 
+  }
+
+  isAnimatingArrow = true; 
+
   const originalTop = 90;
   const originalLeft = 300;
   const targetTop = 73;
@@ -85,21 +109,25 @@ function moveArrow() {
   ) {
     arrow.style.top = originalTop + "px";
     arrow.style.left = originalLeft + "px";
+
+    isAnimatingArrow = false;
   } else {
     arrow.style.top = targetTop + "px";
     arrow.style.left = targetLeft + "px";
 
     setTimeout(() => {
-        animatedButton.classList.add('zoomed');
+      animatedButton.classList.add("zoomed");
     }, 500);
 
     setTimeout(() => {
-        animatedButton.classList.remove('zoomed');
+      animatedButton.classList.remove("zoomed");
     }, 900);
 
     setTimeout(() => {
       arrow.style.top = originalTop + "px";
       arrow.style.left = originalLeft + "px";
+
+      isAnimatingArrow = false; 
     }, 1200);
   }
 }
@@ -107,3 +135,80 @@ function moveArrow() {
 const commissionBlock = document.querySelector(".commission__block");
 
 commissionBlock.addEventListener("mouseenter", moveArrow);
+
+
+
+// EXCHANGE COINS
+const coinBackgrounds = document.querySelectorAll(".exchange__coin-background");
+const coinLogos = document.querySelectorAll(".coin__logo");
+let isAnimatingExchange = false; 
+
+function mooveExchange() {
+  if (isAnimatingExchange) {
+    return; 
+  }
+
+  isAnimatingExchange = true; 
+  
+  const duration = 1200; 
+  const translateXValue = -72; 
+
+  const initialStyles = [];
+  for (let i = 0; i < 3; i++) {
+    initialStyles.push({
+      transform: coinBackgrounds[i].style.transform,
+      zIndex: coinBackgrounds[i].style.zIndex,
+      logoActive: coinLogos[i].classList.contains("active"),
+    });
+  }
+
+  coinBackgrounds[2].style.transform = `translateX(${translateXValue}px)`;
+  coinLogos[2].classList.remove("active");
+
+  setTimeout(() => {
+    coinBackgrounds[1].style.transform = `translateX(${-translateXValue / 2}px)`;
+    coinBackgrounds[1].style.zIndex = "2";
+    coinLogos[1].classList.add("active");
+
+    setTimeout(() => {
+      coinBackgrounds[0].style.transform = `translateX(${-translateXValue / 2}px)`;
+      coinBackgrounds[0].style.zIndex = "1";
+
+      setTimeout(() => {
+        coinBackgrounds[0].style.transform = `translateX(${-translateXValue}px)`;
+        coinBackgrounds[0].style.zIndex = "4";
+        coinLogos[0].classList.add("active");
+        coinBackgrounds[1].style.transform = `translateX(${translateXValue/2}px)`;
+        coinBackgrounds[1].style.zIndex = "2";
+        coinLogos[1].classList.remove("active");
+        coinBackgrounds[2].style.transform = `translateX(${translateXValue/2}px)`;
+        coinBackgrounds[2].style.zIndex = "3";
+
+        setTimeout(() => {
+          coinBackgrounds[0].style.transform = initialStyles[1].transform;
+          coinBackgrounds[0].style.zIndex = initialStyles[1].zIndex;
+          coinBackgrounds[1].style.transform = initialStyles[2].transform;
+          coinBackgrounds[1].style.zIndex = initialStyles[2].zIndex;
+          coinBackgrounds[2].style.transform = initialStyles[0].transform;
+          coinBackgrounds[2].style.zIndex = initialStyles[0].zIndex;
+
+          for (let i = 0; i < 3; i++) {
+            if (initialStyles[i].logoActive) {
+              coinLogos[i].classList.add("active");
+            } else {
+              coinLogos[i].classList.remove("active");
+            }
+          }
+
+          isAnimatingExchange = false; 
+        }, 700);
+      }, 700);
+    }, 0);
+  }, 0);
+}
+
+const exchangeBlock = document.querySelector(".exchange__block");
+exchangeBlock.addEventListener("mouseenter", mooveExchange);
+
+
+// Stat animationn

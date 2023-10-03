@@ -232,17 +232,25 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .exchange__coin-background {
   width: 96px;
   height: 96px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 900px;
   border: 4px solid #f1f5f9;
   background: linear-gradient(25deg, #8ddad5 -22.31%, #1ba27a 65.28%);
   box-shadow: 0px 0px 8px 0px rgba(182, 186, 191, 0.04),
     0px 2px 3px 0px rgba(0, 0, 0, 0.02);
-  margin-left: -32px;
+  margin-left: -62px;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .exchange__coin-background:nth-child(2) {
@@ -253,7 +261,7 @@
   background: linear-gradient(211deg, #04befe -2.24%, #4481eb 108.4%);
 }
 
-/* slider-section start */
+
 
 .section__slider-presentation {
   width: 100%;
@@ -390,3 +398,25 @@
   background-color: var(--General);
   transition: 1s;
 }
+
+.coin__logo {
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.coin__logo.active {
+    opacity: 1;
+}
+
+.btn__exchange {
+    margin-left: -16px;
+    z-index: 5;
+}
+
+.dollar__img {
+    width: 96px;
+    height: 96px;
+    margin-left: -20px;
+}
+
+

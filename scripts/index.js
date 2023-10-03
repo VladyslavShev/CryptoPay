@@ -211,7 +211,7 @@ const exchangeBlock = document.querySelector(".exchange__block");
 exchangeBlock.addEventListener("mouseenter", mooveExchange);
 
 
-// STAT ANIMATION
+
 
 const dataAllTime = {
     name: "all time",
@@ -283,3 +283,4 @@ function statAnimation() {
 }
 
 statBlock.addEventListener("mouseenter", statAnimation);
+

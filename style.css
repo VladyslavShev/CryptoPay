@@ -577,7 +577,8 @@
 .step__body{
   list-style-type: circle filled;
   color: red;
-=======
+}
+
 .verification__anonymous-wrapper {
   margin-top: 4px;
   display: flex;

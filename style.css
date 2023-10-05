@@ -33,6 +33,7 @@
 
 .header__link {
   cursor: pointer;
+  list-style-type: none;
 }
 
 .mode__icon {
@@ -527,7 +528,6 @@
   opacity: 0;
 }
 
-
 /* section__start-steps start */
 
 .section__start-steps {
@@ -549,20 +549,26 @@
   font-family: "Inter", sans-serif;
 }
 
-.steps__title{
-  margin-bottom: 40px;
-}
 
-.step__section1, .step__section2, .step__section3{
+.step__section1,
+.step__section2,
+.step__section3 {
+  width: 100%;
   margin-top: 40px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.step__number{
+.step__section2{
+  flex-direction: row-reverse;
+}
+
+.step__number {
   width: 64px;
   height: 64px;
   border-radius: 32px;
-  background:linear-gradient(220deg, #010417 10.26%, #2B333F 84.25%);
+  background: linear-gradient(220deg, #010417 10.26%, #2b333f 84.25%);
   box-shadow: 0px 0px 8px 0px rgba(182, 186, 191, 0.04);
   color: var(--White);
   display: flex;
@@ -570,14 +576,45 @@
   justify-content: center;
 }
 
-.step__title{
-  color: var(--Dark)
+.step__title {
+  color: var(--Dark);
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.step__body{
-  list-style-type: circle filled;
-  color: red;
+.step__list-item {
+  margin-top: 8px;
 }
+
+.step__description{
+  color: var(--Dark-80);
+  margin-bottom: 20px;
+}
+
+.step__picture-background1,
+.step__picture-background2,
+.step__picture-background3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 590px;
+  height: 488px;
+  border-radius: 40px;
+}
+
+.step__picture-background1 {
+  background: var(--BG-purple);
+}
+
+.step__picture-background2  {
+  background: var(--BG-yellow);
+}
+
+.step__picture-background3 {
+  background: var(--BG-blue);
+}
+
+/* section__start-steps end */
 
 .verification__anonymous-wrapper {
   margin-top: 4px;
@@ -621,9 +658,8 @@
   z-index: 1;
   opacity: 1;
   /* transition: opacity .5s ease-in-out, transform 1s ease-in-out; */
-  transition: transform 0.8s ease-in-out, scale 0.8s ease-in-out, opacity 0.8s ease-in-out;
-
-
+  transition: transform 0.8s ease-in-out, scale 0.8s ease-in-out,
+    opacity 0.8s ease-in-out;
 }
 
 .tail {
@@ -685,7 +721,6 @@
   left: 106px;
 }
 
-
 .anonymus__content.closed {
   display: block;
   opacity: 0;
@@ -697,7 +732,7 @@
   transform: translateY(-20px);
   scale: 0.9;
   opacity: 0.2;
-  transition: .8s;
+  transition: 0.8s;
 }
 
 .anonymus__texts {

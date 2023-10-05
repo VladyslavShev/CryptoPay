@@ -204,10 +204,20 @@ button {
 
 .text-2-xb {
   color: #000;
-  font-family: "SF-Pro-Text";
   font-size: 18.163px;
   font-style: normal;
   font-weight: 700;
   line-height: 21.368px;
   letter-spacing: -0.534px;
+}
+
+.text-date {
+  color: var(--Dark-40);
+text-align: right;
+font-family: "SF-Pro-Text";
+font-size: 14.55px;
+font-style: normal;
+font-weight: 510;
+line-height: 20.133px; 
+letter-spacing: -0.559px;
 }

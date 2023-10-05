@@ -471,11 +471,13 @@
 .stat__text:nth-child(3),
 .stat__text-bottom {
   margin-top: 22.8px;
+  align-items: center;
 }
 
 .stat__text-bottom {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .stat__buttons {

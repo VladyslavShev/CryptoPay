@@ -281,11 +281,27 @@
   position: relative;
   justify-content: space-between;
 }
+
 .image__space {
   width: 488px;
   height: 488px;
   position: relative;
   overflow: hidden;
+}
+
+.slide1__image{
+  width: 405px;
+  height: 216.5px;
+}
+
+.slide2__image{
+  width: 394.28px;
+  height: 217.1px;
+}
+
+.slide3__image{
+  width: 394.28px;
+  height: 369px;
 }
 
 .slider__bakground1 {

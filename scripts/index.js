@@ -284,3 +284,32 @@ function statAnimation() {
 
 statBlock.addEventListener("mouseenter", statAnimation);
 
+
+
+// Anpnymus animation
+const anonymusBlock = document.querySelector(".anonymus__block-wrapper");
+const anonymusContent = document.querySelectorAll(".anonymus__content");
+
+function anonymusAnimation() {
+  anonymusContent[0].classList.add("hidden")
+  anonymusContent[1].classList.remove("closed")
+  setTimeout(() => {
+    anonymusContent[0].classList.add("closed")
+    anonymusContent[0].classList.remove("hidden")
+    anonymusContent[1].classList.add("hidden")
+    anonymusContent[2].classList.remove("closed")
+
+  }, 1000);
+  setTimeout(() => {
+    anonymusContent[2].classList.add("hidden")
+    anonymusContent[0].classList.remove("closed")
+    anonymusContent[1].classList.add("closed")
+    anonymusContent[1].classList.remove("hidden")
+  }, 2000);
+  setTimeout(() => {
+    anonymusContent[2].classList.remove("hidden")
+    anonymusContent[2].classList.add("closed")
+  }, 2400);
+}
+anonymusBlock.addEventListener("mouseenter", anonymusAnimation);
+  

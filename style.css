@@ -740,3 +740,18 @@
   flex-direction: column;
   gap: 20px;
 }
+
+.warning__image {
+  width: 392px;
+  height: 253.52px;
+}
+
+.code__image {
+  width: 394.279px;
+  height: 88.353px;
+}
+
+.invoice__image {
+  width: 403.35px;
+  height: 198.35px;
+}

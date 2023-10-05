@@ -250,7 +250,7 @@ function statAnimation() {
             statData[dataIndex].innerHTML = dataToday.data[dataIndex];
             statData[dataIndex].classList.remove("active");
             dataContent.classList.remove("active");
-        }, 200);
+        }, 300);
         setTimeout(() => {
           statData[dataIndex].classList.add("active");
           dataContent.classList.add("active");
@@ -260,7 +260,7 @@ function statAnimation() {
                 statData[dataIndex].innerHTML = dataYesterday.data[dataIndex];
                 statData[dataIndex].classList.remove("active");
                 dataContent.classList.remove("active");
-            }, 200);
+            }, 300);
         }, 1000);
 
         setTimeout(() => {
@@ -277,7 +277,7 @@ function statAnimation() {
                     animationInProgress = false; // 
                 }
 
-            }, 200);
+            }, 300);
         }, 2000);
     }
 }

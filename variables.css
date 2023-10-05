@@ -71,12 +71,16 @@
   --Gradient-blue: linear-gradient(233deg, #9fccfa -20.48%, #0974f1 97.38%);
 }
 
-.text__white{
-  color:var(--White);
+.text__white {
+  color: var(--White);
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
 }
 
 li {
@@ -109,9 +113,8 @@ button {
   color: var(--General);
 }
 
-
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 .text-xs {
@@ -168,25 +171,53 @@ button {
   letter-spacing: -2.4px;
 }
 
-
-.text-xm{
-font-size: 56px;
-font-style: normal;
-font-weight: 629;
-line-height: 110%; 
-letter-spacing: -1.68px;
+.text-xm {
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 629;
+  line-height: 110%;
+  letter-spacing: -1.68px;
 }
 
 .text-2-s {
-font-family: "SF-Pro-Text";
-font-size: 19.015px;
-font-style: normal;
-font-weight: 400;
-line-height: 22.37px; 
-letter-spacing: -0.559px;
+  font-family: "SF-Pro-Text";
+  font-size: 19.015px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22.37px;
+  letter-spacing: -0.559px;
 }
 
 .text-2sm {
-font-weight: 590;
+  font-weight: 590;
 }
 
+.text-2-xm {
+  color: #000;
+  font-family: "SF-Pro-Text";
+  font-size: 18.163px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21.368px;
+  letter-spacing: -0.534px;
+}
+
+.text-2-xb {
+  color: #000;
+  font-size: 18.163px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21.368px;
+  letter-spacing: -0.534px;
+}
+
+.text-date {
+  color: var(--Dark-40);
+text-align: right;
+font-family: "SF-Pro-Text";
+font-size: 14.55px;
+font-style: normal;
+font-weight: 510;
+line-height: 20.133px; 
+letter-spacing: -0.559px;
+}

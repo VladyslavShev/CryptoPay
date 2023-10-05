@@ -161,7 +161,7 @@
 .section__block-wrapper {
   margin-top: 20px;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -169,6 +169,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  justify-content: space-between;
 }
 
 .commission__block,
@@ -470,11 +471,13 @@
 .stat__text:nth-child(3),
 .stat__text-bottom {
   margin-top: 22.8px;
+  align-items: center;
 }
 
 .stat__text-bottom {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .stat__buttons {
@@ -523,6 +526,7 @@
 .stat__data.active {
   opacity: 0;
 }
+
 
 /* section__start-steps start */
 
@@ -573,4 +577,130 @@
 .step__body{
   list-style-type: circle filled;
   color: red;
+=======
+.verification__anonymous-wrapper {
+  margin-top: 4px;
+  display: flex;
+  gap: 20px;
+}
+
+.verification__block {
+  background: var(--Bg-light);
+  width: 692px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0px 42px 42px 42px;
+  border-radius: 40px;
+}
+
+.anonymus__block-wrapper {
+  width: 488px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 42px;
+  border-radius: 40px;
+  background: var(--Bg-light);
+}
+
+.anonymus__block {
+  position: relative;
+  background: var(--Gradient-blue);
+  padding: 42px 24px;
+  border-radius: 30px;
+  height: 211.1px;
+}
+
+.anonymus__content {
+  position: absolute;
+  background-color: white;
+  padding: 10px 14.958px;
+  border-radius: 16.026px;
+  z-index: 1;
+  opacity: 1;
+  /* transition: opacity .5s ease-in-out, transform 1s ease-in-out; */
+  transition: transform 0.8s ease-in-out, scale 0.8s ease-in-out, opacity 0.8s ease-in-out;
+
+
+}
+
+.tail {
+  position: absolute;
+  width: 21.368px;
+  height: 14.958px;
+  top: 112px;
+  left: -5.2px;
+}
+
+.tree {
+  position: absolute;
+  width: 18.163px;
+  height: 18.163px;
+  top: 11.1px;
+  left: 15px;
+}
+
+.anonymus__text {
+  margin-left: 23.5px;
+}
+
+.anonymus__text:nth-child(2) {
+  margin-top: 21.5px;
+}
+
+.speech__balloon {
+  position: absolute;
+  width: 18.163px;
+  height: 18.163px;
+  flex-shrink: 0;
+  top: 75.9px;
+  left: 15px;
+}
+
+.text__bottom {
+  margin-top: 2px;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+}
+
+.hard__icon,
+.hifive__icon,
+.congratulations__icon {
+  position: absolute;
+  top: 96px;
+  left: 63.6px;
+  width: 18.163px;
+  height: 18.163px;
+}
+
+.hard__icon {
+  left: 56.6px;
+}
+
+.congratulations__icon {
+  top: 98px;
+  left: 106px;
+}
+
+
+.anonymus__content.closed {
+  display: block;
+  opacity: 0;
+  transform: translateY(20px);
+  z-index: -1;
+}
+
+.hidden {
+  transform: translateY(-20px);
+  scale: 0.9;
+  opacity: 0.2;
+  transition: .8s;
+}
+
+.anonymus__texts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }

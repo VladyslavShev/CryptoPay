@@ -250,7 +250,7 @@ function statAnimation() {
             statData[dataIndex].innerHTML = dataToday.data[dataIndex];
             statData[dataIndex].classList.remove("active");
             dataContent.classList.remove("active");
-        }, 200);
+        }, 300);
         setTimeout(() => {
           statData[dataIndex].classList.add("active");
           dataContent.classList.add("active");
@@ -260,7 +260,7 @@ function statAnimation() {
                 statData[dataIndex].innerHTML = dataYesterday.data[dataIndex];
                 statData[dataIndex].classList.remove("active");
                 dataContent.classList.remove("active");
-            }, 200);
+            }, 300);
         }, 1000);
 
         setTimeout(() => {
@@ -277,10 +277,49 @@ function statAnimation() {
                     animationInProgress = false; // 
                 }
 
-            }, 200);
+            }, 300);
         }, 2000);
     }
 }
 
 statBlock.addEventListener("mouseenter", statAnimation);
 
+
+
+// Anpnymus animation
+const anonymusBlock = document.querySelector(".anonymus__block-wrapper");
+const anonymusContent = document.querySelectorAll(".anonymus__content");
+let isAnimatingAnonymus = false; 
+
+function anonymusAnimation() {
+  if (isAnimatingAnonymus) {
+    return;
+  }
+
+  isAnimatingAnonymus = true; 
+
+  anonymusContent[0].classList.add("hidden");
+  anonymusContent[1].classList.remove("closed");
+
+  setTimeout(() => {
+    anonymusContent[0].classList.add("closed");
+    anonymusContent[0].classList.remove("hidden");
+    anonymusContent[1].classList.add("hidden");
+    anonymusContent[2].classList.remove("closed");
+  }, 1000);
+
+  setTimeout(() => {
+    anonymusContent[2].classList.add("hidden");
+    anonymusContent[0].classList.remove("closed");
+    anonymusContent[1].classList.add("closed");
+    anonymusContent[1].classList.remove("hidden");
+  }, 2000);
+
+  setTimeout(() => {
+    anonymusContent[2].classList.remove("hidden");
+    anonymusContent[2].classList.add("closed");
+    isAnimatingAnonymus = false; 
+  }, 2400);
+}
+
+anonymusBlock.addEventListener("mouseenter", anonymusAnimation);

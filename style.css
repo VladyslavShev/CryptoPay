@@ -662,6 +662,8 @@
 .api__button{
   width: 213px;
   font-size: 18px;
+  font-weight: 500;
+  line-height: 120%;
   color: var(--White);
   padding: 18px 42px;
   border: 1px solid white;

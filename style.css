@@ -632,6 +632,124 @@
 
 /* section__start-steps end */
 
+/* section__dev-community start */
+
+.section__dev-community{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 120px;
+}
+
+.api__background{
+  width: 1200px;
+  height: 550px;
+  background: url(./assets/images/API-blockPC\ image\ .webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: 80px;
+  padding-top: 147px;
+}
+
+.api__content{
+  width: 408px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.api__button{
+  width: 213px;
+  font-size: 18px;
+  color: var(--White);
+  padding: 18px 42px;
+  border: 1px solid white;
+  border-radius: 29px;
+}
+
+.content__dev-community{
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dev__community-bg{
+  width: 100%;
+  background-color: #232328;
+}
+
+.community__bg-white{
+  width: 100%;
+  padding-top: 144px ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px ;
+}
+
+.community__body-text{
+  margin-top: 24px;
+  width: 590px;
+  text-align: center;
+  color: var(--Dark-80);
+}
+
+.languages__block{
+  width: 992px;
+  height: 160px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.language__space{
+  width: 179.2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.language__image{
+  width: 96px;
+  height: 96px;
+}
+
+.language__body-text{
+  margin-top: 16px;
+  color: var(--Dark-80);
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; 
+}
+
+.devs__chat-button{
+  margin-bottom: 80px;
+  margin-top: 40px;
+  width: 237px;
+  height: 60px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #41A4DF;
+  color: var(--White);
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+/* section__dev-community end */
+
 .verification__anonymous-wrapper {
   margin-top: 4px;
   display: flex;

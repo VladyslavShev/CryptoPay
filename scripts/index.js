@@ -316,10 +316,10 @@ function anonymusAnimation() {
   }, 2000);
 
   setTimeout(() => {
-    anonymusContent[2].classList.remove("hidden");
     anonymusContent[2].classList.add("closed");
+    anonymusContent[2].classList.remove("hidden");
     isAnimatingAnonymus = false; 
-  }, 2400);
+  }, 2700);
 }
 
 anonymusBlock.addEventListener("mouseenter", anonymusAnimation);
@@ -359,8 +359,9 @@ function verificationAnimation() {
     verificationContent[2].classList.remove("hidden");
     verificationContent[2].classList.add("closed");
     isAnimatingVerification = false; 
-  }, 2400);
+  }, 2700);
 }
 
 verificationBlock.addEventListener("mouseenter", verificationAnimation);
 
+// some comments

@@ -799,7 +799,7 @@
   display: flex;
   align-items: flex-start;
   gap: 7px;
-  transition: transform 0.8s ease-in-out, scale 0.8s ease-in-out,
+  transition: transform 0.9s ease-in-out, scale 0.8s ease-in-out,
   opacity 0.8s ease-in-out;
 }
 
@@ -839,6 +839,7 @@
   opacity: 0;
   transform: translateY(20px);
   z-index: -1;
+
 }
 
 /* VERIFICATION END */
@@ -942,7 +943,7 @@
   transform: translateY(-20px);
   scale: 0.9;
   opacity: 0.2;
-  transition: 0.8s;
+  transition: .9s;
 }
 
 .anonymus__texts {

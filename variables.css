@@ -83,7 +83,6 @@ a {
   text-decoration: none;
 }
 
-
 button {
   cursor: pointer;
 }
@@ -203,6 +202,16 @@ button {
   letter-spacing: -0.534px;
 }
 
+.text-2-b {
+  color: #1b1c22;
+  font-family: "SF-Pro-Text";
+  font-size: 17.24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -0.517px;
+}
+
 .text-2-xb {
   color: #000;
   font-size: 18.163px;
@@ -214,21 +223,41 @@ button {
 
 .text-date {
   color: var(--Dark-40);
-text-align: right;
-font-family: "SF-Pro-Text";
-font-size: 14.55px;
-font-style: normal;
-font-weight: 510;
-line-height: 20.133px; 
-letter-spacing: -0.559px;
+  text-align: right;
+  font-family: "SF-Pro-Text";
+  font-size: 14.55px;
+  font-style: normal;
+  font-weight: 510;
+  line-height: 20.133px;
+  letter-spacing: -0.559px;
 }
 
-.li-circled{
+.li-circled {
   list-style-type: circle filled;
-  color: #41A4DF;
+  color: #41a4df;
   margin-left: 30px;
 }
 
-.decoration-none{
+.decoration-none {
   list-style-type: none;
+}
+
+.text__now {
+  color: #7b8992;
+  font-family: "SF-Pro-Text";
+  font-size: 13.24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%; 
+  letter-spacing: -0.397px;
+}
+
+.text2-r {
+  color: #1B1C22;
+font-size: 17.24px;
+font-family: "SF-Pro-Text";
+font-style: normal;
+font-weight: 400;
+line-height: 110%;
+letter-spacing: -0.517px;
 }

@@ -323,3 +323,44 @@ function anonymusAnimation() {
 }
 
 anonymusBlock.addEventListener("mouseenter", anonymusAnimation);
+
+
+// VERIFICATION ANIMATION
+
+const verificationBlock = document.querySelector(".verification__block");
+const verificationContent = document.querySelectorAll(".verification__content");
+let isAnimatingVerification = false; 
+
+function verificationAnimation() {
+  if (isAnimatingVerification) {
+    return;
+  }
+
+  isAnimatingVerification = true; 
+
+  verificationContent[0].classList.add("hidden");
+  verificationContent[1].classList.remove("closed");
+
+  setTimeout(() => {
+    verificationContent[0].classList.add("closed");
+    verificationContent[0].classList.remove("hidden");
+    verificationContent[1].classList.add("hidden");
+    verificationContent[2].classList.remove("closed");
+  }, 1000);
+
+  setTimeout(() => {
+    verificationContent[2].classList.add("hidden");
+    verificationContent[0].classList.remove("closed");
+    verificationContent[1].classList.add("closed");
+    verificationContent[1].classList.remove("hidden");
+  }, 2000);
+
+  setTimeout(() => {
+    verificationContent[2].classList.remove("hidden");
+    verificationContent[2].classList.add("closed");
+    isAnimatingVerification = false; 
+  }, 2400);
+}
+
+verificationBlock.addEventListener("mouseenter", verificationAnimation);
+

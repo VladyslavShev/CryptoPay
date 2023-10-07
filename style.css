@@ -13,7 +13,7 @@
   align-items: center;
 }
 
-.header__logo {
+.header__logo, .footer__logo {
   width: 64px;
   height: 64px;
 }
@@ -42,8 +42,9 @@
   cursor: pointer;
 }
 
-.header__button {
-  padding: 18px 42px;
+.header__button, .footer__button {
+  width: 193px;
+  padding: 18px 0px;
   border-radius: 900px;
   background: var(--Blue-12);
   color: var(--Deep-blue);
@@ -890,4 +891,55 @@
 .invoice__image {
   width: 403.35px;
   height: 198.35px;
+}
+
+/* footer */
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--Dark-blue);
+}
+
+.footer__main {
+  padding-top: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding-bottom: 40px;
+}
+
+.footer__list {
+  width: 844px;
+  margin-left: 99px;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  list-style-type: none;
+  align-items: center;
+  color: var(--White);
+}
+
+.footer__link {
+  cursor: pointer;
+}
+
+.footer__button {
+  width: 193px;
+  padding: 17px 0px;
+  color: var(--White);
+  border: 1px solid var(--White-60);
+  background-color: inherit;
+}
+
+.footer__text {
+  color: var(--White);
 }

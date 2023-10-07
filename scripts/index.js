@@ -316,8 +316,8 @@ function anonymusAnimation() {
   }, 2000);
 
   setTimeout(() => {
-    anonymusContent[2].classList.remove("hidden");
     anonymusContent[2].classList.add("closed");
+    anonymusContent[2].classList.remove("hidden");
     isAnimatingAnonymus = false; 
   }, 2700);
 }

@@ -364,3 +364,4 @@ function verificationAnimation() {
 
 verificationBlock.addEventListener("mouseenter", verificationAnimation);
 
+// some comments

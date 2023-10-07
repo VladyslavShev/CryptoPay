@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./style.css" />
     <script defer src="./scripts/index.js"></script>
     <script defer src="./scripts/slider.js"></script>
+    <script defer src="./scripts/toggleTheme.js"></script>
     <title>Crypto pay</title>
   </head>
   <body>
@@ -22,11 +23,7 @@
             <li class="header__link text-m">Features</li>
             <li class="header__link text-m">How to start</li>
           </ul>
-          <img
-            class="mode__icon"
-            src="./assets/icons/mode.svg"
-            alt="mode icon Sun"
-          />
+          <div class="mode__icon"></div>
           <button class="header__button text-m">Get started</button>
         </div>
       </header>
@@ -69,11 +66,7 @@
           </div>
           <p class="popular__bots-text text-s">Popular bots use Crypto Pay</p>
         </div>
-        <img
-          class="phone"
-          src="./assets/images/img__phone.png"
-          alt="phone bot example"
-        />
+        <div class="phone"></div>
       </section>
       <section class="section__slider-presentation">
         <div class="slider__container content">
@@ -149,7 +142,7 @@
         <div class="product__presentation-currencies">
           <div class="product__presentation-texts">
             <h2 class="text-l">Accept a wide range of cryptocurrencies</h2>
-            <p class="text__product text-s">
+            <p class="text__black text-s">
               Bill any supported cryptocurrencies with
               <span class="text-m">asset </span>parameter in
               <span class="text__blue">GetInvoice</span> method
@@ -173,7 +166,7 @@
               </div>
               <div class="commission__text">
                 <p class="text-l">One click to start</p>
-                <p class="text-s">
+                <p class="text-s text__black">
                   Open <span class="text__blue">@CryptoBot</span>, go to
                   <span class="text__blue">Crypto Pay</span> and tap Create App
                   to get API Token
@@ -216,7 +209,7 @@
               </div>
               <div class="exchange__text">
                 <p class="text-l">Real-time exchange rates</p>
-                <p class="text-s">
+                <p class="text-s text__black">
                   Request up to date currency rate with the
                   <span class="text__blue">getExchangeRates </span>API method
                 </p>
@@ -253,6 +246,62 @@
                   <p class="text-date">21:30</p>
                 </div>
               </div>
+              <div class="stat__content closed">
+                <p class="stat__text text-2-s">
+                  Application Statistics
+                  <span class="text-2sm">@GoodsBot</span> for
+                  <span class="stat__data text-2sm">today:</span>
+                </p>
+                <p class="stat__text text-2-s">
+                  Volume: <span class="stat__data text-2sm"> $6,530</span>
+                </p>
+                <p class="stat__text text-2-s">
+                  The number of created invoices:
+                  <span class="stat__data text-2sm">2,569</span>
+                </p>
+                <p class="stat__text text-2-s">
+                  Number of payments:
+                  <span class="stat__data text-2sm">1,253</span>
+                </p>
+                <p class="stat__text text-2-s">
+                  Number of users:
+                  <span class="stat__data text-2sm">1,606</span>
+                </p>
+                <div class="stat__text-bottom">
+                  <p class="stat__text text-2-s">
+                    Conversion: <span class="stat__data text-2sm">48%</span>
+                  </p>
+                  <p class="text-date">21:30</p>
+                </div>
+              </div>
+              <div class="stat__content closed">
+                <p class="stat__text text-2-s">
+                  Application Statistics
+                  <span class="text-2sm">@GoodsBot</span> for
+                  <span class="stat__data text-2sm">yesterday:</span>
+                </p>
+                <p class="stat__text text-2-s">
+                  Volume: <span class="stat__data text-2sm"> $8,216</span>
+                </p>
+                <p class="stat__text text-2-s">
+                  The number of created invoices:
+                  <span class="stat__data text-2sm">4,980</span>
+                </p>
+                <p class="stat__text text-2-s">
+                  Number of payments:
+                  <span class="stat__data text-2sm">3,012</span>
+                </p>
+                <p class="stat__text text-2-s">
+                  Number of users:
+                  <span class="stat__data text-2sm">3,606</span>
+                </p>
+                <div class="stat__text-bottom">
+                  <p class="stat__text text-2-s">
+                    Conversion: <span class="stat__data text-2sm">60%</span>
+                  </p>
+                  <p class="text-date">21:30</p>
+                </div>
+              </div>
               <div class="stat__buttons">
                 <div class="stat__button active text-2-s">All Time</div>
                 <div class="stat__button text-2-s">Today</div>
@@ -264,9 +313,9 @@
             </div>
             <div class="stet__texsts">
               <p class="text-l">Payment statistics</p>
-              <p class="text-s">
+              <p class="text-s text__black">
                 Open <span class="text__blue">@CryptoBot</span>, go to
-                <span class="text__blue">Crypto Pay</span>and
+                <span class="text__blue">Crypto Pay</span> and
                 <span class="text__blue">My Apps</span>, App Name to get
                 Statistics
               </p>
@@ -335,7 +384,7 @@
               </div>
               <div class="verification__text">
                 <p class="text-l">Send coins to users</p>
-                <p class="text-s">
+                <p class="text-s text__black">
                   Automate payouts to users with
                   <span class="text__blue text-m">transfer</span> API method
                 </p>
@@ -457,8 +506,10 @@
               </div>
               <div class="anonymus__texts">
                 <p class="text-l">Anonymous payments</p>
-                <p class="text-s">
-                  Use <span class="text-m">allow_anonymous</span> parameter
+                <p class="text-s text__black">
+                  Use
+                  <span class="text-m text__black">allow_anonymous</span>
+                  parameter
                   <br />
                   in <span class="text__blue text-m">createInvoice </span>method
                   to give user <br />
@@ -507,7 +558,7 @@
               <div class="step__number text-l">2</div>
               <p class="step__title text-l">Crypto Pay API Request</p>
               <ul class="text-s">
-                <p class="text-s step__description">
+                <p class="text-s step__description text__black">
                   Requests are only served over HTTPS <br />To pass parameters
                   use:
                 </p>
@@ -540,7 +591,7 @@
               <div class="step__number text-l">3</div>
               <p class="step__title text-l">Getting updates</p>
               <ul class="text-s">
-                <p class="text-s step__description">
+                <p class="text-s step__description text__black">
                   There are two ways of receiving <br />updates for your app:
                 </p>
                 <li class="li-circled step__list-item">
@@ -583,7 +634,7 @@
           <div class="dev__community-bg">
             <div class="community__bg-white">
               <p class="text-xm">Join dev community</p>
-              <p class="text-s community__body-text">
+              <p class="text-s community__body-text text__black">
                 Connect with bot developers and explore the possibilities our
                 crypto payments service unlocks.
               </p>
@@ -594,7 +645,7 @@
                     src="./assets/images/JS.webp"
                     alt=""
                   />
-                  <p class="language__body-text">crypto-pay-api</p>
+                  <p class="language__body-text text__black">crypto-pay-api</p>
                 </div>
                 <div class="language__space">
                   <img
@@ -602,7 +653,7 @@
                     src="./assets/images/NET.webp"
                     alt=""
                   />
-                  <p class="language__body-text">CryptoPay</p>
+                  <p class="language__body-text text__black">CryptoPay</p>
                 </div>
                 <div class="language__space">
                   <img
@@ -610,7 +661,7 @@
                     src="./assets/images/php.webp"
                     alt=""
                   />
-                  <p class="language__body-text">crypto-pay-api</p>
+                  <p class="language__body-text text__black">crypto-pay-api</p>
                 </div>
                 <div class="language__space">
                   <img
@@ -618,7 +669,7 @@
                     src="./assets/images/Python.webp"
                     alt=""
                   />
-                  <p class="language__body-text">aiocryptopay</p>
+                  <p class="language__body-text text__black">aiocryptopay</p>
                 </div>
                 <div class="language__space">
                   <img
@@ -626,7 +677,9 @@
                     src="./assets/images/go.webp"
                     alt=""
                   />
-                  <p class="language__body-text">cryptobot-sdk-golang</p>
+                  <p class="language__body-text text__black">
+                    cryptobot-sdk-golang
+                  </p>
                 </div>
               </div>
               <a class="devs__chat-button" href="#">Open Devs chat</a>

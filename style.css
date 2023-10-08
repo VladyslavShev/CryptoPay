@@ -58,7 +58,7 @@
 .header__button,
 .footer__button {
   width: 193px;
-  padding: 18px 0px;
+  padding: 17px 0px;
   border-radius: 900px;
   background: var(--Blue-12);
   color: var(--Deep-blue);
@@ -121,6 +121,7 @@
 
 .popular__bots-text {
   margin-top: 16px;
+  padding-bottom: 220px;
 }
 
 .phone {
@@ -534,7 +535,7 @@
   position: relative;
   background: url("./assets/images/BG-stats.webp");
   width: 580px;
-  padding: 47.32px 75px 46.59px 74px;
+  padding: 47.32px 73px 46.59px 73px;
   background-size: cover;
   background-position: center;
   border-radius: 24px;
@@ -566,21 +567,17 @@
 
 .stat__content {
   position: absolute;
-  width: 431px;
-  left: 74px;
+  width: 434px;
+  padding: 10px 8px;
+    left: 74px;
   top: 47.32;
   background-color: white;
-  padding: 10px 10px;
   border-radius: 16.778px 16.778px 7.83px 7.83px;
   transition: opacity, 0.75s ease-in-out;
   opacity: 1;
   color: var(--Dark);
 }
 
-.stat__content:nth-child(3) {
-  width: 434px;
-  padding: 10px 8px;
-}
 
 .stat__content.closed {
   opacity: 0;
@@ -610,7 +607,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 213.152px;
+  width: 214.552px;
   padding: 15.024px 0px;
   border-radius: 7.831px;
   background: rgba(54, 136, 194, 0.82);

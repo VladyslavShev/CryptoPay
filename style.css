@@ -493,7 +493,10 @@
   opacity: 0;
 }
 
+
 .coin__logo.active {
+  margin-left: 1.5px;
+  margin-top: 4px;
   opacity: 1;
 }
 

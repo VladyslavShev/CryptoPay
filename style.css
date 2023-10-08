@@ -1167,3 +1167,11 @@
 .text__white-40 {
   color: var(--White-40);
 }
+
+
+/* mobile-styles */
+
+@media (max-width: 1200px) {
+  
+
+}

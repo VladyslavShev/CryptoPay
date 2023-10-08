@@ -304,7 +304,7 @@ button {
     font-style: normal;
     font-weight: 629;
     line-height: 110%;
-    letter-spacing: -0.96px;
+    letter-spacing: -3%;
   }
 
   .text-l {
@@ -340,5 +340,9 @@ button {
     font-style: normal;
     font-weight: 500;
     line-height: 120%;
+  }
+
+  .br-closed{
+    display: none;
   }
 }

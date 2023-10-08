@@ -46,6 +46,8 @@ for (let index = 0; index < currencyImages.length; index++) {
 
 // ZOOM IMAGES
 function zoomImages() {
+  const isDarkTheme = localStorage.getItem("theme");
+
     if (isAnimatingZoom) {
       return;
     }
@@ -56,11 +58,11 @@ function zoomImages() {
     const zoomInterval = setInterval(() => {
   
       imgCurrencyElements[currentIndex].classList.add("zoomed");
-      imgCurrencyText[currentIndex].classList.add("zoomed");
+      imgCurrencyText[currentIndex].classList.add(isDarkTheme === "dark" ? "zoomed-dark" : "zoomed");
   
       setTimeout(() => {
         imgCurrencyElements[currentIndex].classList.remove("zoomed");
-        imgCurrencyText[currentIndex].classList.remove("zoomed");
+        imgCurrencyText[currentIndex].classList.remove(isDarkTheme === "dark" ? "zoomed-dark" : "zoomed");
         currentIndex++;
   
         if (currentIndex === currencyImages.length) {
@@ -92,6 +94,8 @@ const arrow = document.querySelector(".animated__arrow");
 let isAnimatingArrow = false; 
 
 function moveArrow() {
+  const isDarkTheme = localStorage.getItem("theme");
+
   if (isAnimatingArrow) {
     return; 
   }
@@ -116,11 +120,11 @@ function moveArrow() {
     arrow.style.left = targetLeft + "px";
 
     setTimeout(() => {
-      animatedButton.classList.add("zoomed");
+      animatedButton.classList.add(isDarkTheme === "dark" ?  "zoomed-dark" : "zoomed");
     }, 500);
 
     setTimeout(() => {
-      animatedButton.classList.remove("zoomed");
+      animatedButton.classList.remove(isDarkTheme === "dark" ?  "zoomed-dark" : "zoomed");
     }, 900);
 
     setTimeout(() => {

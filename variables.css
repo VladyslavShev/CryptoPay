@@ -59,6 +59,7 @@
   --Blue-12: rgba(41, 126, 226, 0.12);
   --Deep-blue: #297ee2;
   --White: #fff;
+  --White-40: rgba(255, 255, 255, 0.4);
   --White-60: rgba(255, 255, 255, 0.6);
   --White-80: rgba(255, 255, 255, 0.8);
   --Dark-blue: #232328;
@@ -77,6 +78,10 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  transition: .3s;
 }
 
 a {
@@ -212,6 +217,10 @@ button {
   letter-spacing: -0.517px;
 }
 
+.text-2-b.dark {
+ color: white;
+}
+
 .text-2-xb {
   color: #000;
   font-size: 18.163px;
@@ -260,4 +269,18 @@ font-style: normal;
 font-weight: 400;
 line-height: 110%;
 letter-spacing: -0.517px;
+}
+.text2-r.dark {
+  color: white;
+
+}
+
+
+.bg-dark-body {
+  background: var(--Dark);
+  color: var(--White);
+}
+
+.text-l.bg-dark {
+  color: var(--White);
 }

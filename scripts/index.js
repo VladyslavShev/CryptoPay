@@ -46,6 +46,8 @@ for (let index = 0; index < currencyImages.length; index++) {
 
 // ZOOM IMAGES
 function zoomImages() {
+  const isDarkTheme = localStorage.getItem("theme");
+
     if (isAnimatingZoom) {
       return;
     }
@@ -56,11 +58,11 @@ function zoomImages() {
     const zoomInterval = setInterval(() => {
   
       imgCurrencyElements[currentIndex].classList.add("zoomed");
-      imgCurrencyText[currentIndex].classList.add("zoomed");
+      imgCurrencyText[currentIndex].classList.add(isDarkTheme === "dark" ? "zoomed-dark" : "zoomed");
   
       setTimeout(() => {
         imgCurrencyElements[currentIndex].classList.remove("zoomed");
-        imgCurrencyText[currentIndex].classList.remove("zoomed");
+        imgCurrencyText[currentIndex].classList.remove(isDarkTheme === "dark" ? "zoomed-dark" : "zoomed");
         currentIndex++;
   
         if (currentIndex === currencyImages.length) {
@@ -92,6 +94,8 @@ const arrow = document.querySelector(".animated__arrow");
 let isAnimatingArrow = false; 
 
 function moveArrow() {
+  const isDarkTheme = localStorage.getItem("theme");
+
   if (isAnimatingArrow) {
     return; 
   }
@@ -116,11 +120,11 @@ function moveArrow() {
     arrow.style.left = targetLeft + "px";
 
     setTimeout(() => {
-      animatedButton.classList.add("zoomed");
+      animatedButton.classList.add(isDarkTheme === "dark" ?  "zoomed-dark" : "zoomed");
     }, 500);
 
     setTimeout(() => {
-      animatedButton.classList.remove("zoomed");
+      animatedButton.classList.remove(isDarkTheme === "dark" ?  "zoomed-dark" : "zoomed");
     }, 900);
 
     setTimeout(() => {
@@ -213,27 +217,14 @@ exchangeBlock.addEventListener("mouseenter", mooveExchange);
 
 
 
-const dataAllTime = {
-    name: "all time",
-    data: ["all time", "$204,920", "16,256", "9,353", "5,606", "57%"]
-};
 
-const dataToday = {
-    name: "today",
-    data: ["today", "$6,530", "2,569", "1,253", "1,606", "48%"]
-};
-
-const dataYesterday = {
-    name: "yesterday",
-    data: ["yesterday", "$8,216", "4,980", "3,012", "3.606", "60%"]
-};
 
 const statBlock = document.querySelector(".block__stat");
-const statData = document.querySelectorAll(".stat__data");
-const dataContent = document.querySelector(".stat__content")
+const dataContent = document.querySelectorAll(".stat__content")
 const statButton = document.querySelectorAll(".stat__button")
 
 let animationInProgress = false; 
+
 function statAnimation() {
     if (animationInProgress) {
         return; 
@@ -241,45 +232,24 @@ function statAnimation() {
 
     animationInProgress = true; 
 
-    for (let dataIndex = 0; dataIndex < statData.length; dataIndex++) {
-        statData[dataIndex].classList.add("active");
-        dataContent.classList.add("active");
-        statButton[0].classList.remove("active")
-        setTimeout(() => {
-          statButton[1].classList.add("active")
-            statData[dataIndex].innerHTML = dataToday.data[dataIndex];
-            statData[dataIndex].classList.remove("active");
-            dataContent.classList.remove("active");
-        }, 300);
-        setTimeout(() => {
-          statData[dataIndex].classList.add("active");
-          dataContent.classList.add("active");
-          statButton[1].classList.remove("active")
-            setTimeout(() => {
-              statButton[2].classList.add("active")
-                statData[dataIndex].innerHTML = dataYesterday.data[dataIndex];
-                statData[dataIndex].classList.remove("active");
-                dataContent.classList.remove("active");
-            }, 300);
-        }, 1000);
+    dataContent[0].classList.add("closed")
+    dataContent[1].classList.remove("closed")
+    statButton[0].classList.remove("active")
+    statButton[1].classList.add("active")
+    setTimeout(() => {
+      dataContent[1].classList.add("closed")
+      dataContent[2].classList.remove("closed")
+      statButton[1].classList.remove("active")
+      statButton[2].classList.add("active")
 
-        setTimeout(() => {
-          statButton[2].classList.remove("active")
-          statButton[0].classList.add("active")
-            statData[dataIndex].classList.add("active");
-            dataContent.classList.add("active");
-            setTimeout(() => {
-                statData[dataIndex].innerHTML = dataAllTime.data[dataIndex];
-                statData[dataIndex].classList.remove("active");
-                dataContent.classList.remove("active");
-    
-                if (dataIndex === statData.length - 1) {
-                    animationInProgress = false; // 
-                }
-
-            }, 300);
-        }, 2000);
-    }
+    }, 900);
+    setTimeout(() => {
+      dataContent[2].classList.add("closed")
+      dataContent[0].classList.remove("closed")
+      statButton[2].classList.remove("active")
+      statButton[0].classList.add("active")
+      animationInProgress = false; 
+    }, 1800);
 }
 
 statBlock.addEventListener("mouseenter", statAnimation);
@@ -365,3 +335,4 @@ function verificationAnimation() {
 verificationBlock.addEventListener("mouseenter", verificationAnimation);
 
 // some comments
+

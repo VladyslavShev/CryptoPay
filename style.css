@@ -493,7 +493,6 @@
   opacity: 0;
 }
 
-
 .coin__logo.active {
   margin-left: 1.5px;
   margin-top: 4px;
@@ -573,7 +572,7 @@
   position: absolute;
   width: 434px;
   padding: 10px 8px;
-    left: 74px;
+  left: 74px;
   top: 47.32;
   background-color: white;
   border-radius: 16.778px 16.778px 7.83px 7.83px;
@@ -581,7 +580,6 @@
   opacity: 1;
   color: var(--Dark);
 }
-
 
 .stat__content.closed {
   opacity: 0;
@@ -1168,10 +1166,122 @@
   color: var(--White-40);
 }
 
-
 /* mobile-styles */
 
 @media (max-width: 1200px) {
+  .header {
+    margin-top: 53px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header.content {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0px 20px;
+  }
+
+  .header__logo,
+  .footer__logo {
+    width: 46px;
+    height: 46px;
+  }
+
+  .header__main {
+    gap: 8px;
+  }
+
+  .header__list {
+    display: none;
+  }
+
+  .mode__icon {
+    width: 30px;
+    height: 30px;
+    background: url("./assets/icons/mode.svg");
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+  }
+
+  .mode__icon.dark {
+    width: 30px;
+    height: 30px;
+    background: url("./assets/icons/mode-dark.svg");
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+  }
+
+  .header__button,
+  .footer__button {
+    width: 163px;
+    padding: 11.21px 0px;
+  }
+
+  .section__cover {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 80px;
+  }
+
+  .section__main {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   
+  .section__title {
+    width: 335px;
+    margin-top: 20px;
+  }
+
+  .section__description {
+    margin-top: 24px;
+    width: 315px;
+    text-align: center;
+  }
+
+  .section__button {
+    margin-top: 12px;
+    padding: 11.21px 32px;
+    width: 163px;
+  }
+  
+  .popular__bots-icons {
+    margin-top: 24px;
+  }
+
+  .bot__icon {
+    width: 59px;
+    height: 59px;
+    margin-left: -19.67px;
+  }
+
+  .popular__bots-text {
+    margin-top: 12px;
+    padding-bottom: 0px;
+  }
+
+  .phone {
+    width: 333px;
+    height: 664px;
+    background: url("./assets/images/img_phone-light.webp");
+    background-position: center;
+    background-size: cover;
+    transition: 0.3s;
+  }
+  
+  .phone.dark {
+    background: url("./assets/images/img_phoneDark.webp");
+    background-position: center;
+    background-size: cover;
+    width: 333px;
+    height: 664px;
+  }
 
 }

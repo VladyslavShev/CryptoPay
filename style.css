@@ -125,8 +125,9 @@
 }
 
 .phone {
-  width: 353px;
-  height: 770px;
+  margin-top: 23.61px;
+  width: 336.743px;
+  height: 693.311px;
   background: url("./assets/images/img_phone-light.webp");
   background-position: center;
   background-size: cover;
@@ -134,12 +135,14 @@
 }
 
 .phone.dark {
+  margin-top: 23.61px;
   background: url("./assets/images/img_phoneDark.webp");
   background-position: center;
   background-size: cover;
-  width: 353px;
-  height: 770px;
+  width: 336.743px;
+  height: 693.311px;
 }
+
 
 .section__product-presentation {
   margin-top: 144px;
@@ -1236,7 +1239,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding-bottom: 80px;
+    padding-bottom: 116.91px;
   }
 
   .section__main {
@@ -1279,20 +1282,22 @@
   }
 
   .phone {
-    width: 333px;
-    height: 664px;
+    width: 310.85px;
+    height: 640px;
     background: url("./assets/images/img_phone-light.webp");
     background-position: center;
     background-size: cover;
     transition: 0.3s;
+    align-self: center;
   }
 
   .phone.dark {
     background: url("./assets/images/img_phoneDark.webp");
     background-position: center;
     background-size: cover;
-    width: 333px;
-    height: 664px;
+    width: 310.85px;
+    height: 640px;
+    align-self: center;
   }
 
   /* section-cover end */

@@ -576,7 +576,7 @@
   width: 434px;
   padding: 10px 8px;
   left: 74px;
-  top: 47.32;
+  top: 47.32px;
   background-color: white;
   border-radius: 16.778px 16.778px 7.83px 7.83px;
   transition: opacity, 0.75s ease-in-out;
@@ -1454,4 +1454,212 @@
   background-color: var(--General);
   transition: 1s;
 }
+
+/* section__product-presentation start */
+
+.section__product-presentation {
+  margin-top: 80px;
+}
+
+.product__presentation-texts {
+  gap: 16px;
+}
+
+.product__presentation-currencies {
+  padding: 32px 32px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 24px;
+  border-radius: 24px;
+}
+
+.img__currency-container {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.img__currency {
+  gap: 0px;
+}
+
+.img__currency:nth-child(5){
+  margin-left: 11px;
+}
+
+.currency__img{
+  width: 56px;
+  height: 56px;
+}
+
+.img__currency-text {
+  display: none;
+}
+
+.section__block-wrapper {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.commission__exchange-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.commission__block,
+.exchange__block {
+  width: 335px;
+  padding: 32px 32px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  gap: 24px;
+}
+
+.commission__text,
+.exchange__text {
+  gap: 16px;
+}
+
+.commission__animated {
+  position: relative;
+  width: 100%;
+  padding: 29px 24.5px 28px 25.5px;
+}
+
+.animated__button {
+  gap: 4px;
+  width: 221px;
+}
+
+/* .animated__arrow {
+  width: 45.802px;
+  height: 48.738px;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+} */
+
+.exchange__animated {
+margin-left: 22px;
+}
+
+.exchange__coin-background {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 617.553px;
+  border: 3px solid #f1f5f9;
+  background: linear-gradient(25deg, #8ddad5 -22.31%, #1ba27a 65.28%);
+  box-shadow: 0px 0px 8px 0px rgba(182, 186, 191, 0.04),
+    0px 2px 3px 0px rgba(0, 0, 0, 0.02);
+  margin-left: -45px;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.exchange__coin-background.dark {
+  border: 3px solid #1a1a1a;
+}
+
+.coin__logo {
+ width: 40px;
+ height: 40px;
+}
+
+.btn__exchange {
+  width: 29px;
+  height: 18px;
+  margin-left: -8px;
+  z-index: 5;
+  background: url(./assets/icons/btn-exchange.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+.btn__exchange.dark {
+  width: 29px;
+  height: 18px;
+  margin-left: -8px;
+  z-index: 5;
+  background: url(./assets/icons/btn-exchange-dark.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+.dollar__img {
+  width: 66px;
+  height: 66px;
+  margin-left: -8px;
+}
+
+
+.block__stat {
+  width: 335px;
+  padding: 32px 32px;
+  border-radius: 24px;
+}
+
+.stat {
+  position: relative;
+  background: url("./assets/images/BG-stats.webp");
+  width: 271px;
+  padding: 24px 20px 24.5px 20px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+}
+
+.stet__texsts {
+  width: 250px;
+  gap: 16px;
+}
+
+.stat__content {
+  position: absolute;
+  width: 231px;
+  padding: 5.36px 8.39px;
+  left: 20px;
+  top: 24px;
+  background-color: white;
+  border-radius: 16.778px 16.778px 7.83px 7.83px;
+  transition: opacity, 0.75s ease-in-out;
+  opacity: 1;
+  color: var(--Dark);
+}
+
+.stat__text:nth-child(2),
+.stat__text:nth-child(3),
+.stat__text-bottom {
+  margin-top: 12.2292px;
+  align-items: center;
+}
+
+.stat__buttons {
+  margin-top: 125px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.52px;
+}
+
+.stat__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 114.24px;
+  padding: 7.1px 0px;
+  border-radius: 4.197px;
+  background: rgba(54, 136, 194, 0.82);
+  color: white;
+  transition: 0.8s ease-in-out;
+}
+/* section__product-presentation end */
+
 }

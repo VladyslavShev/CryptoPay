@@ -8,9 +8,19 @@ const textContainer3 = document.querySelector(".slider__text_container3");
 
 const textContainers = [textContainer1, textContainer2, textContainer3];
 
-let offset = 488;
+let vieportWidth = window.innerWidth
+console.log(vieportWidth);
+const offset = 488;
+const mobileOffset = 335;
 let step = 1;
 let canClick = true;
+
+// window.addEventListener("resize", function() {
+//   // Получить текущую ширину вьюпорта
+//   let width = window.innerWidth;
+//   vieportWidth = width
+//   console.log(vieportWidth);
+// });
 
 function ChangeSliderBar(step) {
   document.querySelectorAll(".slider__bar").forEach((e, idx) => {
@@ -45,6 +55,8 @@ document.querySelectorAll(".slider_back").forEach((e, idx) => {
 })
 }
 
+
+// PC-logic
 sliderSection.addEventListener("wheel", function (event) {
   // Проверяем направление скроллинга (event.deltaY положительное значение при скроллинге вниз, и отрицательное при скроллинге вверх)
   if (event.deltaY > 0) {
@@ -94,4 +106,72 @@ sliderSection.addEventListener("wheel", function (event) {
   }
 });
 
-// Some comments
+
+// mobile-logic
+sliderSection.addEventListener("touchstart", function (event) {
+  // Сохраняем начальное положение пальца
+  this.startX = event.touches[0].clientX;
+});
+
+sliderSection.addEventListener("touchmove", function (event) {
+  // Вычисляем расстояние, на которое палец переместился
+  const deltaX = event.touches[0].clientX - this.startX;
+
+  // Если расстояние больше порогового значения, то считаем, что это свайп
+  if (Math.abs(deltaX) > 50) {
+    // Если свайп влево, то ...
+    if (deltaX < 0) {
+      console.log("vlevo");
+      if (step < 3) {
+        event.preventDefault();
+      }
+      if (!canClick || step == 3) {
+        return;
+      }
+
+      currentImage.style.right = mobileOffset * step + "px";
+    step++;
+
+    changeContentDown(step);
+    backgroundChange(step);
+    ChangeSliderBar(step);
+
+    canClick = false;
+
+    setTimeout(() => {
+      canClick = true;
+    }, 1000);
+
+    }
+
+    // Если свайп вправо, то ...
+    if (deltaX > 0) {
+     console.log("vpravo");
+     if (step > 1) {
+      event.preventDefault();
+    }
+    if (!canClick || step == 1) {
+      return;
+    }
+    
+    currentImage.style.right = mobileOffset * (step - 2) + "px";
+    step--;
+    
+    changeContentUp(step);
+    backgroundChange(step);
+    ChangeSliderBar(step);
+    
+    canClick = false;
+    
+    setTimeout(() => {
+      canClick = true;
+    }, 1000);
+    }
+  }
+});
+
+// Отлавливаем событие touchend
+sliderSection.addEventListener("touchend", function () {
+  // Обнуляем начальное положение пальца
+  this.startX = 0;
+});

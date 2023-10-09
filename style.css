@@ -1355,6 +1355,18 @@
     transition: 1s;
   }
 
+
+.slider__text_container1 {
+  margin-top: 0;
+  transition: 1s;
+  position: absolute;
+  left: 0;
+  top: 367px;
+  opacity: 1;
+  text-align: center;
+  width: 335px;
+}
+
   .current__image {
     width: 335px;
     height: 335px;
@@ -1381,6 +1393,7 @@
     text-align: center;
     width: 335px;
   }
+
 
   .slider__text_container2 {
     margin-top: 0;
@@ -1592,6 +1605,34 @@
     background-size: cover;
     background-position: center;
   }
+
+
+.slider__bar-active {
+  background-color: var(--General);
+  transition: 1s;
+}
+
+.current__image {
+  width: 335px;
+  height: 335px;
+  position: absolute;
+  right: 0;
+  transition: ease-in-out 1s;
+}
+
+.slider__image {
+  width: 335px;
+  height: 335px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider__all-images{
+  display: flex;
+  width: 1005px;
+}
+
 
   .dollar__img {
     width: 66px;
@@ -1940,4 +1981,5 @@
   }
 
   /* section__start-steps end */
+
 }

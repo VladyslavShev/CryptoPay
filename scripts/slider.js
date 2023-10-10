@@ -9,7 +9,6 @@ const textContainer3 = document.querySelector(".slider__text_container3");
 const textContainers = [textContainer1, textContainer2, textContainer3];
 
 let vieportWidth = window.innerWidth
-console.log(vieportWidth);
 const offset = 488;
 const mobileOffset = 335;
 let step = 1;

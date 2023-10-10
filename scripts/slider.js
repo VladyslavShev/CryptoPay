@@ -15,12 +15,8 @@ const mobileOffset = 335;
 let step = 1;
 let canClick = true;
 
-// window.addEventListener("resize", function() {
-//   // Получить текущую ширину вьюпорта
-//   let width = window.innerWidth;
-//   vieportWidth = width
-//   console.log(vieportWidth);
-// });
+let isPc
+
 
 function ChangeSliderBar(step) {
   document.querySelectorAll(".slider__bar").forEach((e, idx) => {
@@ -55,9 +51,9 @@ document.querySelectorAll(".slider_back").forEach((e, idx) => {
 })
 }
 
-
-// PC-logic
-sliderSection.addEventListener("wheel", function (event) {
+function addPCListener(argument) {
+  // PC-logic
+argument.addEventListener("wheel", function (event) {
   // Проверяем направление скроллинга (event.deltaY положительное значение при скроллинге вниз, и отрицательное при скроллинге вверх)
   if (event.deltaY > 0) {
     // skroll down
@@ -105,10 +101,11 @@ sliderSection.addEventListener("wheel", function (event) {
     }, 1000);
   }
 });
+}
 
-
-// mobile-logic
-sliderSection.addEventListener("touchstart", function (event) {
+function addMobileListener(argument) {
+  // mobile-logic
+argument.addEventListener("touchstart", function (event) {
   // Сохраняем начальное положение пальца
   this.startX = event.touches[0].clientX;
 });
@@ -121,7 +118,6 @@ sliderSection.addEventListener("touchmove", function (event) {
   if (Math.abs(deltaX) > 50) {
     // Если свайп влево, то ...
     if (deltaX < 0) {
-      console.log("vlevo");
       if (step < 3) {
         event.preventDefault();
       }
@@ -146,7 +142,6 @@ sliderSection.addEventListener("touchmove", function (event) {
 
     // Если свайп вправо, то ...
     if (deltaX > 0) {
-     console.log("vpravo");
      if (step > 1) {
       event.preventDefault();
     }
@@ -175,3 +170,18 @@ sliderSection.addEventListener("touchend", function () {
   // Обнуляем начальное положение пальца
   this.startX = 0;
 });
+}
+
+
+if (vieportWidth >= 1200) {
+  isPc = true
+  addPCListener(sliderSection)
+} 
+
+
+else {
+  isPc = false
+  addMobileListener(sliderSection)
+}
+
+

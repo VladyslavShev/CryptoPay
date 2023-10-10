@@ -1,5 +1,8 @@
 const toggleThemeButton = document.querySelector(".mode__icon");
-const phoneTitle = document.querySelector(".phone");
+const toggleThemeButtonLight = document.querySelector(".mode__icon-icon");
+const toggleThemeButtonDark = document.querySelector(".mode__icon-icon-dark");
+const phoneTitle = document.querySelector(".phone__title-image");
+const phoneTitleDark = document.querySelector(".phone__title-image-dark");
 const headerList = document.querySelector(".header__list");
 const headerButton = document.querySelector(".header__button");
 const footerButton = document.querySelector(".footer__button");
@@ -17,7 +20,10 @@ const communityBg = document.querySelector(".community__bg-white");
 const imgCommission = document.querySelector(".verifivation__content-bg");
 
 function toggleTheme() {
-    phoneTitle.classList.toggle("dark")
+    toggleThemeButtonLight.classList.toggle("hidden-title")
+    toggleThemeButtonDark.classList.toggle("visible-title")
+    phoneTitle.classList.toggle("hidden-title")
+    phoneTitleDark.classList.toggle("visible-title")
     toggleThemeButton.classList.toggle("dark")
   document.body.classList.toggle("bg-dark-body");
   headerList.classList.toggle("text__white");

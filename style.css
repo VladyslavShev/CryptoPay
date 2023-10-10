@@ -38,21 +38,30 @@
 }
 
 .mode__icon {
+  position: relative;
   width: 40px;
   height: 40px;
-  background: url("./assets/icons/mode.svg");
-  background-position: center;
-  background-size: cover;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
 }
 
-.mode__icon.dark {
-  width: 40px;
-  height: 40px;
-  background: url("./assets/icons/mode-dark.svg");
-  background-position: center;
-  background-size: cover;
+.mode__icon-icon {
+  width: 32px;
+  height: 32px;
   cursor: pointer;
+  transition: .3s;
+}
+
+.mode__icon-icon-dark {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  transition: .3s;
 }
 
 .header__button,
@@ -128,20 +137,42 @@
   margin-top: 23.61px;
   width: 336.743px;
   height: 693.311px;
-  background: url("./assets/images/img_phone-light.webp");
-  background-position: center;
-  background-size: cover;
   transition: 0.3s;
+  position: relative;
 }
 
 .phone.dark {
   margin-top: 23.61px;
-  background: url("./assets/images/img_phoneDark.webp");
-  background-position: center;
-  background-size: cover;
   width: 336.743px;
   height: 693.311px;
+  position: relative;
 }
+
+.phone__title-image {
+  width: 336.743px;
+  height: 693.311px;
+  transition: .3s;
+  opacity: 1;
+}
+
+.phone__title-image-dark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 336.743px;
+  height: 693.311px;
+  transition: .3s;
+  opacity: 1;
+}
+
+.hidden-title {
+  opacity: 0;
+}
+
+.visible-title {
+  opacity: 1;
+}
+
 
 
 .section__product-presentation {
@@ -1199,7 +1230,7 @@
   }
 
   .header__main {
-    gap: 8px;
+    gap: 0px;
   }
 
   .header__list {
@@ -1207,21 +1238,20 @@
   }
 
   .mode__icon {
-    width: 30px;
-    height: 30px;
-    background: url("./assets/icons/mode.svg");
-    background-position: center;
-    background-size: cover;
-    cursor: pointer;
+    width: 40px;
+    height: 40px;
   }
 
-  .mode__icon.dark {
+  .mode__icon-icon {
     width: 30px;
     height: 30px;
-    background: url("./assets/icons/mode-dark.svg");
-    background-position: center;
-    background-size: cover;
-    cursor: pointer;
+  }
+
+  .mode__icon-icon-dark {
+    width: 30px;
+    height: 30px;
+    left: 5px;
+    top: 3px;
   }
 
   .header__button,
@@ -1284,20 +1314,24 @@
   .phone {
     width: 310.85px;
     height: 640px;
-    background: url("./assets/images/img_phone-light.webp");
-    background-position: center;
-    background-size: cover;
     transition: 0.3s;
     align-self: center;
   }
 
   .phone.dark {
-    background: url("./assets/images/img_phoneDark.webp");
-    background-position: center;
-    background-size: cover;
     width: 310.85px;
     height: 640px;
     align-self: center;
+  }
+
+  .phone__title-image {
+    width: 310.85px;
+    height: 640px;
+  }
+
+  .phone__title-image-dark {
+    width: 310.85px;
+    height: 640px;
   }
 
   /* section-cover end */

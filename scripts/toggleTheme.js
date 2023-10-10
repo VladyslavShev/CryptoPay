@@ -84,7 +84,5 @@ if (savedTheme === "dark") {
 
   if (mediaQuery.matches) {
     toggleTheme();
-  } else {
-    console.log("light");
   }
 }

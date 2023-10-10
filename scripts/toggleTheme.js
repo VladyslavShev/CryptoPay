@@ -7,7 +7,9 @@ const headerList = document.querySelector(".header__list");
 const headerButton = document.querySelector(".header__button");
 const footerButton = document.querySelector(".footer__button");
 const textL = document.querySelectorAll(".text-l");
-const sliderSectionTheme = document.querySelector(".section__slider-presentation");
+const sliderSectionTheme = document.querySelector(
+  ".section__slider-presentation"
+);
 const textBlack = document.querySelectorAll(".text__black");
 const exchangeBtn = document.querySelector(".btn__exchange");
 const imgCurrencyText = document.querySelectorAll(".img__currency-text");
@@ -20,11 +22,11 @@ const communityBg = document.querySelector(".community__bg-white");
 const imgCommission = document.querySelector(".verifivation__content-bg");
 
 function toggleTheme() {
-    toggleThemeButtonLight.classList.toggle("hidden-title")
-    toggleThemeButtonDark.classList.toggle("visible-title")
-    phoneTitle.classList.toggle("hidden-title")
-    phoneTitleDark.classList.toggle("visible-title")
-    toggleThemeButton.classList.toggle("dark")
+  toggleThemeButtonLight.classList.toggle("hidden-title");
+  toggleThemeButtonDark.classList.toggle("visible-title");
+  phoneTitle.classList.toggle("hidden-title");
+  phoneTitleDark.classList.toggle("visible-title");
+  toggleThemeButton.classList.toggle("dark");
   document.body.classList.toggle("bg-dark-body");
   headerList.classList.toggle("text__white");
   headerButton.classList.toggle("dark");
@@ -52,28 +54,37 @@ function toggleTheme() {
     e.classList.toggle("dark");
   });
   sectionStartSteps.classList.toggle("bg-dark-block");
-  animatedButton.classList.toggle("dark")
-  communityBg.classList.toggle("dark")
-  imgCommission.classList.toggle("dark")
-  verificationContent.forEach(e => {
-    e.classList.toggle("dark")
-  })
-  text2R.forEach(e => {
-    e.classList.toggle("dark")
-  })
-  text2B.forEach(e => {
-    e.classList.toggle("dark")
-  })
-  exchangeBtn.classList.toggle("dark")
+  animatedButton.classList.toggle("dark");
+  communityBg.classList.toggle("dark");
+  imgCommission.classList.toggle("dark");
+  verificationContent.forEach((e) => {
+    e.classList.toggle("dark");
+  });
+  text2R.forEach((e) => {
+    e.classList.toggle("dark");
+  });
+  text2B.forEach((e) => {
+    e.classList.toggle("dark");
+  });
+  exchangeBtn.classList.toggle("dark");
   const isDarkMode = document.body.classList.contains("bg-dark-body");
   localStorage.setItem("theme", isDarkMode ? "dark" : "light");
 }
 
-
 toggleThemeButton.addEventListener("click", toggleTheme);
 
 const savedTheme = localStorage.getItem("theme");
-if (savedTheme === "dark") {
-  toggleTheme(); 
-}
 
+if (savedTheme === "dark") {
+  toggleTheme();
+} else if (savedTheme === "light") {
+  
+} else {
+  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+  if (mediaQuery.matches) {
+    toggleTheme();
+  } else {
+    console.log("light");
+  }
+}

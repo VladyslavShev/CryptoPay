@@ -82,6 +82,7 @@
 
 .header__button.dark,
 .footer__button.dark {
+  border-radius: 30px;
   background-color: inherit;
   color: var(--White);
   outline: 1px solid var(--White-60);
@@ -1264,6 +1265,7 @@
 
   .header__button,
   .footer__button {
+    border-radius: 23px;
     width: 163px;
     padding: 12.21px 0px;
   }

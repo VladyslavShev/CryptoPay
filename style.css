@@ -67,12 +67,14 @@
 .header__button,
 .footer__button {
   width: 193px;
-  padding: 18px 0px;
-  border-radius: 900px;
+  height: 60px;
+  border-radius: 30px;
   background: var(--Blue-12);
   color: var(--Deep-blue);
   text-align: center;
-  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button__link {
@@ -1267,7 +1269,7 @@
   .footer__button {
     border-radius: 23px;
     width: 163px;
-    padding: 12.21px 0px;
+    height: 46px;
   }
 
   /* header-section end */

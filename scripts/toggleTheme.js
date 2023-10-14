@@ -10,6 +10,7 @@ const textL = document.querySelectorAll(".text-l");
 const sliderSectionTheme = document.querySelector(
   ".section__slider-presentation"
 );
+const botIcons = document.querySelectorAll(".bot__icon")
 const textBlack = document.querySelectorAll(".text__black");
 const exchangeBtn = document.querySelector(".btn__exchange");
 const imgCurrencyText = document.querySelectorAll(".img__currency-text");
@@ -51,6 +52,9 @@ function toggleTheme() {
     e.classList.toggle("dark");
   });
   stepNumber.forEach((e) => {
+    e.classList.toggle("dark");
+  });
+  botIcons.forEach((e) => {
     e.classList.toggle("dark");
   });
   sectionStartSteps.classList.toggle("bg-dark-block");
